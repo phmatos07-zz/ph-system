@@ -4,16 +4,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Validator } from 'class-validator';
+import { TimelineComponent } from './components/timeline.components';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TimelineComponent
+    ],
   imports: [],
   exports: [
     CommonModule,
     HttpClientModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TimelineComponent
   ],
   providers: [
     Validator
