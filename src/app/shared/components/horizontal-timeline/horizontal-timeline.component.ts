@@ -2,7 +2,7 @@ import { Validator } from 'class-validator';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'horizontal-timeline',
+  selector: 'app-horizontal-timeline',
   templateUrl: './horizontal-timeline.component.html',
   styleUrls: ['./horizontal-timeline.component.scss']
 })
