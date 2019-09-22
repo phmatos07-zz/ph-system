@@ -1,0 +1,59 @@
+$border: 2px solid #0169e0;
+
+.horizontal-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin: {
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
+.line-and-point {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+}
+
+.line {
+  width: 100%;
+  border-top: 2px solid #0169e0;
+}
+
+p {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: $border;
+  background-color: #ffffff;
+
+  span {
+    position: absolute;
+    width: 200px;
+    padding: 2px;
+    top: -30px;
+    right: -999%;
+    border-radius: 5px;
+    border: $border;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.active-point {
+  background-color: #00e686;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.larger-width {
+  width: 20px;
+}
