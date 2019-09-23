@@ -2,9 +2,9 @@ $border: 2px solid #0169e0;
 
 .horizontal-timeline {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: nowrap;
   margin: {
     top: 10px;
     bottom: 10px;
@@ -13,9 +13,9 @@ $border: 2px solid #0169e0;
 
 .line-and-point {
   display: flex;
-  align-items: center;
   flex-grow: 1;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .line {
@@ -27,22 +27,22 @@ p {
   position: relative;
   width: 10px;
   height: 10px;
-  border-radius: 100%;
-  border: $border;
   background-color: #ffffff;
+  border: $border;
+  border-radius: 100%;
 
   span {
     position: absolute;
-    width: 200px;
-    padding: 2px;
     top: -30px;
     right: -999%;
-    border-radius: 5px;
-    border: $border;
+    width: 200px;
+    padding: 2px;
+    overflow: hidden;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    border: $border;
+    border-radius: 5px;
   }
 }
 
