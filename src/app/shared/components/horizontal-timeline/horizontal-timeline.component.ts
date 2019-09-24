@@ -1,5 +1,5 @@
-import { Validator } from 'class-validator';
 import { Component, Input, OnInit } from '@angular/core';
+import { Validator } from 'class-validator';
 
 @Component({
   selector: 'app-horizontal-timeline',
@@ -12,10 +12,10 @@ export class HorizontalTimelineComponent implements OnInit {
   pointsInTime = Array<string>();
 
   @Input()
-  position: string | number;
+  position: string | number = 0;
 
   quantityValues: number = this.pointsInTime.length;
-  lastValue: number;
+  lastValue: number = 0;
 
   constructor(private validator: Validator) { }
 
@@ -32,10 +32,10 @@ export class HorizontalTimelineComponent implements OnInit {
         return this.pointsInTime.indexOf(this.position.toString());
       }
       return this.position < this.quantityValues ? Number(this.position) : 0;
-
-    } else {
-      console.warn('Por favor, envie um Array que contenha mais de um valor.');
     }
+
+    console.warn('HorizontalTimelineComponent: Por favor, envie um Array que contenha mais de um valor.');
+    return 0;
   }
 
   trackByPointsInTime(index: number): number {
