@@ -1,4 +1,5 @@
-$border: 2px solid #0169e0;
+$base-border: 2px solid #0169e0;
+$width-legend: 180px;
 
 .horizontal-timeline {
   display: flex;
@@ -16,11 +17,17 @@ $border: 2px solid #0169e0;
   flex-grow: 1;
   flex-wrap: nowrap;
   align-items: center;
+
+  &:nth-child(odd) {
+    p > span {
+      top: 15px;
+    }
+  }
 }
 
 .line {
   width: 100%;
-  border-top: 2px solid #0169e0;
+  border-top: $base-border;
 }
 
 p {
@@ -28,20 +35,20 @@ p {
   width: 10px;
   height: 10px;
   background-color: #ffffff;
-  border: $border;
+  border: $base-border;
   border-radius: 100%;
 
   span {
     position: absolute;
-    top: -30px;
-    right: -999%;
-    width: 200px;
+    top: -32px;
+    left: -($width-legend / 2);
+    width: $width-legend;
     padding: 2px;
     overflow: hidden;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border: $border;
+    border: $base-border;
     border-radius: 5px;
   }
 }
