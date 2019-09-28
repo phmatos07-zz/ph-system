@@ -15,7 +15,7 @@ export class HorizontalTimelineComponent implements OnInit {
   position: string | number = 0;
 
   quantityValues: number = this.pointsInTime.length;
-  lastValue: number = 0;
+  lastValue = 0;
 
   constructor(private validator: Validator) { }
 

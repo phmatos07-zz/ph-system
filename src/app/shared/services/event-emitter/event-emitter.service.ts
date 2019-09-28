@@ -6,7 +6,7 @@ import { Observable, Subject } from 'rxjs/';
 })
 export class EventEmitterService {
 
-  private subjectData = new Subject;
+  private subjectData = new Subject();
 
   send<T>(data: T): void {
     this.subjectData.next(data);
