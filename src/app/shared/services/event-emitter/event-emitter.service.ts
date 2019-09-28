@@ -9,7 +9,7 @@ export class EventEmitterService {
   private subjectData = new Subject;
 
   send<T>(data: T): void {
-    return this.subjectData.next(data);
+    this.subjectData.next(data);
   }
 
   getData(): Observable<any> {
