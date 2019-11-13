@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ph-core-utils": {
+      "root": "projects/ph-core-utils",
+      "sourceRoot": "projects/ph-core-utils/src",
+      "projectType": "library",
+      "prefix": "pcu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ph-core-utils/tsconfig.lib.json",
+            "project": "projects/ph-core-utils/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ph-core-utils/src/test.ts",
+            "tsConfig": "projects/ph-core-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/ph-core-utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ph-core-utils/tsconfig.lib.json",
+              "projects/ph-core-utils/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ph-system"

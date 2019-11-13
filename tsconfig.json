@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ph-core-utils": [
+        "dist/ph-core-utils"
+      ],
+      "ph-core-utils/*": [
+        "dist/ph-core-utils/*"
+      ]
+    }
   }
 }
