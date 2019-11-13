@@ -1,12 +1,12 @@
-import { StorageTypeEnum } from './enum/storage-type.enum';
 import { Injectable } from '@angular/core';
+import { StorageTypeEnum } from './enum/storage-type.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService {
 
-  readonly KEY_NAME = 'phSystem';
+  keyName = 'phCoreUtils';
 
   setItem<T>(data: T, storageType = StorageTypeEnum.SESSION_STORAGE): void {
 
@@ -15,10 +15,10 @@ export class StorageService {
       const dataJson = JSON.stringify(data);
 
       if (storageType === StorageTypeEnum.SESSION_STORAGE) {
-        sessionStorage.setItem(this.KEY_NAME, dataJson);
+        sessionStorage.setItem(this.keyName, dataJson);
         return;
       }
-      localStorage.setItem(this.KEY_NAME, dataJson);
+      localStorage.setItem(this.keyName, dataJson);
     }
   }
 
@@ -27,9 +27,13 @@ export class StorageService {
     let dataJson = null;
 
     if (storageType === StorageTypeEnum.SESSION_STORAGE) {
-      dataJson = sessionStorage.getItem(this.KEY_NAME);
+      dataJson = sessionStorage.getItem(this.keyName);
     } else {
-      dataJson = localStorage.getItem(this.KEY_NAME);
+      dataJson = localStorage.getItem(this.keyName);
+    }
+
+    if (!dataJson) {
+      console.warn(`Infelizmente não existe dados armazenados na ${storageType}`);
     }
     return dataJson ? JSON.parse(dataJson) : null;
   }
@@ -37,10 +41,10 @@ export class StorageService {
   removeItem(storageType = StorageTypeEnum.SESSION_STORAGE): void {
 
     if (storageType === StorageTypeEnum.SESSION_STORAGE) {
-      sessionStorage.removeItem(this.KEY_NAME);
+      sessionStorage.removeItem(this.keyName);
       return;
     }
-    localStorage.removeItem(this.KEY_NAME);
+    localStorage.removeItem(this.keyName);
   }
 
   clearStorage(): void {

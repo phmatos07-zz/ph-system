@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import { PhCoreUtilsComponent } from './ph-core-utils.component';
 
 @NgModule({
-  declarations: [PhCoreUtilsComponent],
-  imports: [
-  ],
-  exports: [PhCoreUtilsComponent]
+  declarations: [],
+  imports: [],
+  exports: []
 })
 export class PhCoreUtilsModule { }
