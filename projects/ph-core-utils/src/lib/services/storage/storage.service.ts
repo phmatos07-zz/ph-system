@@ -24,18 +24,23 @@ export class StorageService {
 
   getItem(storageType = StorageTypeEnum.SESSION_STORAGE): JSON {
 
-    let dataJson = null;
+    try {
 
-    if (storageType === StorageTypeEnum.SESSION_STORAGE) {
-      dataJson = sessionStorage.getItem(this.keyName);
-    } else {
-      dataJson = localStorage.getItem(this.keyName);
-    }
+      let dataJson = null;
 
-    if (!dataJson) {
-      console.warn(`Infelizmente não existe dados armazenados na ${storageType}`);
+      if (storageType === StorageTypeEnum.SESSION_STORAGE) {
+        dataJson = sessionStorage.getItem(this.keyName);
+      } else {
+        dataJson = localStorage.getItem(this.keyName);
+      }
+
+      if (!dataJson) throw storageType;
+      return JSON.parse(dataJson);
     }
-    return dataJson ? JSON.parse(dataJson) : null;
+    catch (err) {
+      console.warn(`Infelizmente não existe dados armazenados na ${err}`);
+      return JSON;
+    }
   }
 
   removeItem(storageType = StorageTypeEnum.SESSION_STORAGE): void {
