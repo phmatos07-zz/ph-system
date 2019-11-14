@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProxifyService } from './../../projects/ph-core-utils/src/lib/services/proxify/proxify.service';
+import { StorageService } from './../../projects/ph-core-utils/src/lib/services/storage/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  ngOnInit(): void {
+  constructor(
+    private storageService: StorageService,
+    private proxifyService: ProxifyService
+  ) { }
 
+  ngOnInit(): void {
+    this.initEventListener();
+  }
+
+  private initEventListener(): void {
   }
 }
