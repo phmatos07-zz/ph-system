@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AlertMessageComponent } from './alert-message/alert-message.component';
 import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-timeline.component';
 
@@ -9,7 +10,8 @@ import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-ti
     HorizontalTimelineComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     AlertMessageComponent,

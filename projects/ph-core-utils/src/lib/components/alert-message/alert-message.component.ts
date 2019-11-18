@@ -4,8 +4,8 @@ import { FormValidation } from './../../utils/form-validation/form-validation.ut
 
 @Component({
   selector: 'pcu-alert-message',
-  templateUrl: './alert-messageComponent.component.html',
-  styleUrls: ['./alert-messageComponent.component.scss']
+  templateUrl: './alert-message.component.html',
+  styleUrls: ['./alert-message.component.scss']
 })
 export class AlertMessageComponent {
 

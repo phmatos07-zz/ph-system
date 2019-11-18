@@ -6,8 +6,6 @@ import { ConfigValidatorInterface } from './../interfaces/config-validator.inter
 export class FormValidation {
 
   private static validator = new Validator();
-  private static pattDateBr = /(0[0-9]|[12][0-9]|3[01])[-\.\/](0[0-9]|1[012])[-\.\/][0-9]{4}/;
-  private static pattDateEn = /[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/;
 
   static getAlertMessage(validatorName: string, validatorValue?: any): string {
 
@@ -98,7 +96,8 @@ export class FormValidation {
   static isDateBr(abstractControl: AbstractControl): object | null {
 
     const isNotEmpty = FormValidation.validator.isNotEmpty(abstractControl.value);
-    const isDateBr = FormValidation.pattDateBr.exec(abstractControl.value);
+    const pattDateBr = /(0[0-9]|[12][0-9]|3[01])[-\.\/](0[0-9]|1[012])[-\.\/][0-9]{4}/;
+    const isDateBr = pattDateBr.exec(abstractControl.value);
 
     if (isNotEmpty && !isDateBr) {
       return { invalidDateBr: true };
@@ -109,7 +108,8 @@ export class FormValidation {
   static isDateEn(abstractControl: AbstractControl): object | null {
 
     const isNotEmpty = FormValidation.validator.isNotEmpty(abstractControl.value);
-    const isDateEn = FormValidation.pattDateEn.exec(abstractControl.value);
+    const pattDateEn = /[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/;
+    const isDateEn = pattDateEn.exec(abstractControl.value);
 
     if (isNotEmpty && !isDateEn) {
       return { invalidDateEn: true };
