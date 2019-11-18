@@ -9,7 +9,8 @@ export class FormValidation {
   private static pattDateBr = /(0[0-9]|[12][0-9]|3[01])[-\.\/](0[0-9]|1[012])[-\.\/][0-9]{4}/;
   private static pattDateEn = /[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/;
 
-  static obterMensagemErro(validatorName: string, validatorValue?: any): string {
+  static getAlertMessage(validatorName: string, validatorValue?: any): string {
+
     const config: ConfigValidatorInterface = {
       required: 'Campo Obrigatório.',
       minlength: `Digite no mínimo ${validatorValue.requiredLength} caractere(s).`,
