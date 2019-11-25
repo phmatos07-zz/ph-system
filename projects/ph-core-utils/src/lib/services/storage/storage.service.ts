@@ -34,10 +34,12 @@ export class StorageService {
         dataJson = localStorage.getItem(this.keyName);
       }
 
-      if (!dataJson) throw storageType;
+      if (!dataJson) {
+        throw storageType;
+      }
       return JSON.parse(dataJson);
-    }
-    catch (err) {
+
+    } catch (err) {
       console.warn(`Infelizmente não existe dados armazenados na ${err}`);
       return JSON;
     }

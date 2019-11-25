@@ -13,12 +13,12 @@ import { AppMaterialModule } from './app.material.module';
     CommonModule,
     HttpClientModule,
     RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
     AppMaterialModule
   ],
   exports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppMaterialModule,
   ],
   providers: [
