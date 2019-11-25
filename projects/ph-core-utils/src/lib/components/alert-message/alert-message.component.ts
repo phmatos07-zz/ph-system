@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { FormValidation } from './../../utils/form-validation/form-validation.util';
 
 @Component({
@@ -10,7 +10,7 @@ import { FormValidation } from './../../utils/form-validation/form-validation.ut
 export class AlertMessageComponent {
 
   @Input()
-  control?: FormControl | FormGroup;
+  control: FormControl | null = null;
 
   get errorMessage(): string | null {
 
