@@ -3,6 +3,7 @@
  */
 
 export * from './lib/components/index';
+export * from './lib/directives/index';
 export * from './lib/ph-core-utils.module';
 export * from './lib/services/index';
 export * from './lib/utils/index';
