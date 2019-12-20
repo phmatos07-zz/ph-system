@@ -11,6 +11,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "preserveSymlinks": false,
     "types": [],
     "lib": [
       "dom",
