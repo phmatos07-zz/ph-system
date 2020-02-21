@@ -23,7 +23,7 @@ export class EventBusService {
   on<T>(eventName: string): Observable<T> {
     return fromEvent(window, eventName)
       .pipe(
-        map((event: CustomEvent) => event.detail),
+        map((event: CustomEvent | any) => event.detail),
         catchError(err => {
           return of(err);
         })
