@@ -1,16 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { InputMaskDirective } from './input-mask/input-mask.directive';
+import { InputMaskModule } from './input-mask/input-mask.module';
 
 @NgModule({
-  declarations: [
-    InputMaskDirective
-  ],
   imports: [
-    CommonModule,
+    InputMaskModule,
   ],
   exports: [
-    InputMaskDirective
+    InputMaskModule
   ]
 })
 export class DirectivesModule { }
