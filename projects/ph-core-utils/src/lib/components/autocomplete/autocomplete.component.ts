@@ -7,7 +7,7 @@ import { Component, DoCheck, EventEmitter, Input, Output } from '@angular/core';
  * para renderizar a listaView no HTML.
  */
 @Component({
-  selector: 'fe-autocomplete',
+  selector: 'pcu-autocomplete',
   templateUrl: './autocomplete.component.html'
 })
 export class AutocompleteComponent implements DoCheck {
