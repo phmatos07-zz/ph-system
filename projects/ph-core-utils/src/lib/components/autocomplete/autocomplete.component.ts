@@ -8,7 +8,8 @@ import { Component, DoCheck, EventEmitter, Input, Output } from '@angular/core';
  */
 @Component({
   selector: 'pcu-autocomplete',
-  templateUrl: './autocomplete.component.html'
+  templateUrl: './autocomplete.component.html',
+  styleUrls: ['./autocomplete.component.scss']
 })
 export class AutocompleteComponent implements DoCheck {
 
@@ -20,9 +21,6 @@ export class AutocompleteComponent implements DoCheck {
 
   @Input()
   agruparValores = false;
-
-  @Input()
-  hasScroll = true;
 
   @Output()
   registroEmitter = new EventEmitter<any>();
