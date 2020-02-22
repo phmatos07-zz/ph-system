@@ -1,21 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AlertMessageComponent } from './alert-message/alert-message.component';
-import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-timeline.component';
+import { AlertMessageModule } from './alert-message/alert-message.module';
+import { AutocompleteModule } from './autocomplete/autocomplete.module';
+import { HorizontalTimelineModule } from './horizontal-timeline/horizontal-timeline.module';
 
 @NgModule({
-  declarations: [
-    AlertMessageComponent,
-    HorizontalTimelineComponent
-  ],
   imports: [
-    CommonModule,
-    ReactiveFormsModule
+    AlertMessageModule,
+    AutocompleteModule,
+    HorizontalTimelineModule
   ],
   exports: [
-    AlertMessageComponent,
-    HorizontalTimelineComponent
+    AlertMessageModule,
+    AutocompleteModule,
+    HorizontalTimelineModule
   ]
 })
 export class ComponentsModule { }

@@ -1,7 +1,7 @@
 import { AbstractControl } from '@angular/forms';
 import { Validator } from 'class-validator';
 import { DddBrConst } from './../../consts/ddd-br.const';
-import { ConfigValidatorInterface } from './../interfaces/config-validator.interface';
+import { ConfigValidatorInterface } from './config-validator.interface';
 
 export class FormValidation {
 
