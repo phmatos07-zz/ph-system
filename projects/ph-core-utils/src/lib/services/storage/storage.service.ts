@@ -6,7 +6,7 @@ import { StorageTypeEnum } from './enum/storage-type.enum';
 })
 export class StorageService {
 
-  keyName = 'phCoreUtils';
+  keyName = '@ph/core-utils';
 
   setItem<T>(data: T, storageType = StorageTypeEnum.SESSION_STORAGE): void {
 
