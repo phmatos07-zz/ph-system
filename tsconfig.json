@@ -20,10 +20,10 @@
       "dom"
     ],
     "paths": {
-      "@ph-core-utils": [
+      "@ph/core-utils": [
         "dist/ph-core-utils"
       ],
-      "@ph-core-utils/*": [
+      "@ph/core-utils/*": [
         "dist/ph-core-utils/*"
       ]
     }

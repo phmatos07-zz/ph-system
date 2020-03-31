@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProxifyService, StorageService } from '@ph-core-utils';
+import { ProxifyService, StorageService } from '@ph/core-utils';
 
 @Component({
   selector: 'app-root',

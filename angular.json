@@ -135,7 +135,7 @@
         }
       }
     },
-    "ph-core-utils": {
+    "@ph/core-utils": {
       "root": "projects/ph-core-utils",
       "sourceRoot": "projects/ph-core-utils/src",
       "projectType": "library",
