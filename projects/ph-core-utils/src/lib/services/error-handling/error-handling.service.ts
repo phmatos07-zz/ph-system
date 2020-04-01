@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorHandler, Injectable, Injector } from '@angular/core';
-import { ErrorService } from './error.service';
-import { LoggingService } from './logging.service';
-import { NotificationService } from './notification.service';
+import { ErrorService } from './service/error.service';
+import { LoggingService } from './service/logging.service';
+import { NotificationService } from './service/notification.service';
 
 /**
  * @description Serviço responsável por capturar todos os erros emitidos com o ‘ErrorHandler’ do Angular.
@@ -11,7 +11,7 @@ import { NotificationService } from './notification.service';
 @Injectable(
   { providedIn: 'root' }
 )
-export class ErrorHandlerService implements ErrorHandler {
+export class ErrorHandlingService implements ErrorHandler {
 
   /**
    * Como o tratamento de erros é essencial, ele é carregado primeiro.

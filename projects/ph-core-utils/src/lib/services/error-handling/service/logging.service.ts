@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ClientErrorObject } from './model/client-error-object.model';
-import { HttpStatusCodeEnum } from './model/http-status-code.enum';
-import { ServerErrorObject } from './model/server-error-object.model';
+import { ClientErrorObject } from './../model/client-error-object.model';
+import { HttpStatusCodeEnum } from './../model/http-status-code.enum';
+import { ServerErrorObject } from './../model/server-error-object.model';
 
 /**
  * @description Serviço responsável por registrar as mensagens no console.
@@ -14,7 +14,13 @@ export class LoggingService {
 
   logHttpError(errorObject: ServerErrorObject): void {
 
-    if (errorObject.status && errorObject.status >= HttpStatusCodeEnum.BAD_REQUEST && errorObject.status < HttpStatusCodeEnum.INTERNAL_SERVER_ERROR) {
+    const STATUS_400 = (
+      errorObject.status
+      && errorObject.status >= HttpStatusCodeEnum.BAD_REQUEST
+      && errorObject.status < HttpStatusCodeEnum.INTERNAL_SERVER_ERROR
+    );
+
+    if (STATUS_400) {
       console.warn(`[${errorObject.typeError}]`, errorObject);
       return;
     }

@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ClientErrorObject } from './model/client-error-object.model';
-import { ServerErrorObject } from './model/server-error-object.model';
-import { TypeErrorEnum } from './model/type-error.enum';
+import { ClientErrorObject } from './../model/client-error-object.model';
+import { ServerErrorObject } from './../model/server-error-object.model';
+import { TypeErrorEnum } from './../model/type-error.enum';
 
 /**
  * @description Serviço respónsavel por analisar as mensagens de erro e rastrear a pilha do servidor (API) e do cliente (FRONT).
