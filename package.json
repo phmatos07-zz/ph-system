@@ -11,6 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint:sass": "sass-lint -c ./.sass-lint.yml -v -q",
+    "lint:sass:table": "sass-lint -c ./.sass-lint.yml -v -q -f table",
+    "lint:sass:vs": "sass-lint -c ./.sass-lint.yml -v -q -f visualstudio",
     "e2e": "ng e2e"
   },
   "dependencies": {
