@@ -4,8 +4,11 @@ options:
 
 files:
   include:
+    - 'projects/ph-core-utils/src/lib/**/*.s+(a|c)ss'
     - 'src/**/*.s+(a|c)ss'
   ignore:
+    - '.vscode/**/*.s+(a|c)ss'
+    - 'e2e/**/*.s+(a|c)ss'
     - 'node_modules/**/*.s+(a|c)ss'
 
 rules:
@@ -43,6 +46,7 @@ rules:
       - 'bottom'
       - 'left'
       - 'z-index'
+      -
       - 'grid'
       - 'grid-area'
       - 'grid-auto-columns'
@@ -77,22 +81,23 @@ rules:
       - 'direction'
       - 'visibility'
       - 'opacity'
+      -
       - 'width'
       - 'height'
       - 'max-width'
       - 'max-height'
       - 'min-width'
       - 'min-height'
-      - 'padding'
-      - 'padding-top'
-      - 'padding-right'
-      - 'padding-bottom'
-      - 'padding-left'
       - 'margin'
       - 'margin-top'
       - 'margin-right'
       - 'margin-bottom'
       - 'margin-left'
+      - 'padding'
+      - 'padding-top'
+      - 'padding-right'
+      - 'padding-bottom'
+      - 'padding-left'
       - 'transform'
       - 'transform-origin'
       - 'transform-style'
@@ -101,7 +106,7 @@ rules:
       - 'overflow-y'
       - 'overflow-wrap'
       - 'clip'
-      - 'color'
+      -
       - 'font'
       - 'font-family'
       - 'src'
@@ -127,6 +132,7 @@ rules:
       - 'font-variant-numeric'
       - 'font-variant-position'
       - 'font-variation-settings'
+      - 'color'
       - 'text-align'
       - 'text-decoration'
       - 'text-decoration-color'
@@ -158,6 +164,7 @@ rules:
       - 'hyphens'
       - 'white-space'
       - 'vertical-align'
+      -
       - 'background'
       - 'background-color'
       - 'background-image'
