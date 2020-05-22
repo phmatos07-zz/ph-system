@@ -8,6 +8,7 @@ files:
     - 'src/**/*.s+(a|c)ss'
   ignore:
     - '.vscode/**/*.s+(a|c)ss'
+    - '.dist/**/*.s+(a|c)ss'
     - 'e2e/**/*.s+(a|c)ss'
     - 'node_modules/**/*.s+(a|c)ss'
 
