@@ -3,7 +3,7 @@ $font-size: .8rem !default;
 $font-weight: bold !default;
 
 p {
-  color: $text-color;
   font-size: $font-size;
   font-weight: $font-weight;
+  color: $text-color;
 }
